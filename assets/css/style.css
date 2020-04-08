@@ -34,7 +34,7 @@
 
 @keyframes fade-in-from-bottom {
     0% {
-        transform: translateZ(70px) scaleY(-1)  rotateX(-67deg);
+        transform: translateZ(70px) scaleY(-1)  rotateX(-70deg);
         opacity: 0;
     }
     100% {
