@@ -34,11 +34,11 @@
 
 @keyframes fade-in-from-bottom {
     0% {
-        transform: translateZ(5rem) scaleY(-1)  rotateX(-67deg);
+        transform: translateZ(70px) scaleY(-1)  rotateX(-67deg);
         opacity: 0;
     }
     100% {
-        transform: translateZ(5rem) scaleY(-1)  rotateX(-70deg);
+        transform: translateZ(70px) scaleY(-1)  rotateX(-70deg);
         opacity: 100%;
     }
 }
