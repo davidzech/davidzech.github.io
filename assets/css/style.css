@@ -34,10 +34,9 @@
 
 @keyframes fade-in-from-bottom {
     0% {
-        transform: translateY(0.15rem) scaleY(-1.1) translateZ(5rem) rotateX(-70deg);
+        transform: translateY(0.15rem) scaleY(-1) translateZ(5rem) rotateX(-67deg);
         opacity: 0;
     }
-
     100% {
         transform: translateY(0) scaleY(-1) translateZ(5rem) rotateX(-70deg);
         opacity: 100%;
@@ -45,11 +44,11 @@
 }
 
 .titlecard {
-    animation: 0.7s ease-out fade-in-from-top;
+    animation: 0.7s ease-out fade-in-from-top forwards;
 }
 
 .links {
-    animation: 0.7s ease-out fade-in-from-top;
+    animation: 0.7s ease-out fade-in-from-top forwards;
 }
 
 .flip-box {
@@ -61,8 +60,7 @@
 }
 
 .inverse {
-    animation: 0.7s ease-out fade-in-from-bottom;
-    transform: translateY(0) scaleY(-1) translateZ(5rem) rotateX(-70deg);
+    animation: 0.7s ease-out fade-in-from-bottom forwards;
     pointer-events: none;
     -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.03)));
     filter: blur(0.06rem);
