@@ -34,12 +34,12 @@
 
 @keyframes fade-in-from-bottom {
     0% {
-        transform: translateY(0.5rem) scaleY(-1.2) rotateX(-72.5deg)  translateY(-4rem) translateZ(5rem);
+        transform: translateY(0.15rem) scaleY(-1.1) translateZ(5rem) rotateX(-70deg);
         opacity: 0;
     }
 
     100% {
-        transform: scaleY(-1) rotateX(-72.5deg)  translateY(-4rem) translateZ(5rem);
+        transform: translateY(0) scaleY(-1) translateZ(5rem) rotateX(-70deg);
         opacity: 100%;
     }
 }
@@ -56,13 +56,16 @@
     background-color: transparent;
     perspective: 1000px;
     z-index: -1;
+    position: relative;
+    top: -3rem;
 }
 
 .inverse {
     animation: 0.7s ease-out fade-in-from-bottom;
-    transform: scaleY(-1) rotateX(-72.5deg)  translateY(-4rem) translateZ(5rem);
+    transform: translateY(0) scaleY(-1) translateZ(5rem) rotateX(-70deg);
     pointer-events: none;
-    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.10)), to(rgba(0, 0, 0, 0.01)));
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.03)));
+    filter: blur(0.06rem);
 }
 
 .text-center-overflow {
