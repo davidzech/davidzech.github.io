@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<style>
+
+
+    @keyframes fade-in-from-top2 {
+        0% {
+            transform: translateY(-1rem);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 100%;
+        }
+    }
+
+    @keyframes fade-in-from-top {
+        0% {
+            transform: translateY(-10%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 100%;
+        }
+    }
+
+    @keyframes fade-in-from-bottom {
+        0% {
+            transform: translateY(-2.5rem) scaleY(-0.4) rotateX(-40deg) scaleX(1.05);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(-3rem) scaleY(-0.3) rotateX(-40deg) scaleX(1.05);
+            opacity: 100%;
+        }
+    }
+
+    @keyframes flipbox-transform {
+        0% {
+            perspective: 0;
+        }
+
+        100% {
+        }
+    }
+
+    .titlecard {
+        animation: 0.7s ease-out fade-in-from-top;
+    }
+
+    .links {
+        animation: 0.7s ease-out fade-in-from-top;
+    }
+
+    .inverse {
+        margin-top: 0rem;
+        animation: 0.7s ease-out fade-in-from-bottom;
+        transform: translateY(-3rem) scaleY(-0.3) rotateX(-40deg) scaleX(1.05);
+        pointer-events: none;
+        -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.10)), to(rgba(0,0,0,0.01)));
+    }
+
+    .text-center-overflow {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main {
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 15vh;
+    }
+
+    .nounderline {
+        text-decoration: none !important
+    }
+
+    .item {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .jumbotron {
+        padding-left: 10em;
+        padding-right: 10em;
+        background-color: transparent;
+    }
+
+    .name {
+        font-weight: 200;
+        font-size: 8rem;
+        color: lightslategray;
+    }
+
+    .subtitle {
+        font-weight: 100;
+        font-style: italic;
+        font-size: 2rem;
+        color: lightslategray;
+    }
+
+    .cardtext {
+        margin-top: 1rem;
+        color: lightslategray;
+        font-weight: 400;
+    }
+
+    .cardtext:hover {
+        color: darkslategray;
+    }
+
+    .item:hover .cardtext {
+        color: darkslategray;
+    }
+
+    .flip-box {
+        background-color: transparent;
+        perspective: 1000px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="main container">
+        <div class="row text-center justify-content-md-center titlecard">
+            <div class="col-md-auto">
+                <div class="jumbotron">
+                    <h1 class="name text-center-overflow">David Zech</h1>
+                    <h4 class="subtitle text-center-overflow">Software Engineer</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center justify-content-center links">
+            <a class="nounderline" href="https://github.com/davidzech">
+                <div class="item col-auto">
+                    <img height="120" width="120" src="./assets/github.svg">
+                    <div class="text-center">
+                        <h4 class="cardtext">GitHub</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="nounderline" href="https://www.linkedin.com/in/anh-nguyen-8b9302118/">
+                <div class="item col-auto">
+                    <img height="120" width="120" src="./assets/linkedin.svg">
+                    <div class="text-center">
+                        <h4 class="cardtext">LinkedIn</h4>
+                    </div>
+                </div>
+            </a>
+            <a class="nounderline" href="./assets/resume.pdf">
+                <div class="item col-auto">
+                    <img height="120" width="120" src="./assets/resume.svg">
+                    <div class="text-center">
+                        <h4 class="cardtext">Resume</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="flip-box">
+            <div class="row text-center justify-content-center inverse">
+                <a class="nounderline">
+                    <div class="item col-auto">
+                        <img height="120" width="120" src="./assets/github.svg">
+                        <div class="text-center">
+                            <h4 class="cardtext">GitHub</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="nounderline">
+                    <div class="item col-auto">
+                        <img height="120" width="120" src="./assets/linkedin.svg">
+                        <div class="text-center">
+                            <h4 class="cardtext">LinkedIn</h4>
+                        </div>
+                    </div>
+                </a>
+                <a class="nounderline">
+                    <div class="item col-auto">
+                        <img height="120" width="120" src="./assets/resume.svg">
+                        <div class="text-center">
+                            <h4 class="cardtext">Resume</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("a").hover(e => {
+        console.log("hovering")
+    }, e => { console.log("not hovering")})
+</script>
+</html>
