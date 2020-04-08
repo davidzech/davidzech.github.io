@@ -14,7 +14,12 @@
 
 <style>
 
-
+    .email {
+        font-weight: 240;
+        font-size: 1.2rem;
+        color: slategray;
+    }
+    
     @keyframes fade-in-from-top2 {
         0% {
             transform: translateY(-1rem);
@@ -88,6 +93,15 @@
     .item {
         padding-left: 3em;
         padding-right: 3em;
+        transition: 0.2s;
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+    }
+
+    .inverse .item .hover {
+        transform: scale(1.05);
     }
 
     .jumbotron {
@@ -130,6 +144,10 @@
         top: -3rem;
         z-index: -1;
     }
+
+    .at::before {
+        content: "@";
+    }
 </style>
 </head>
 
@@ -140,12 +158,13 @@
                 <div class="jumbotron">
                     <h1 class="name text-center-overflow">David Zech</h1>
                     <h4 class="subtitle text-center-overflow">Software Engineer</h4>
+                    <a class="email" href="#" target="_top">david<span class="at"></span>davidzech.com</a>
                 </div>
             </div>
         </div>
         <div class="row text-center justify-content-center links">
             <a class="nounderline" href="https://github.com/davidzech">
-                <div class="item col-auto">
+                <div class="item col-auto" id="github">
                     <img height="120" width="120" src="./assets/github.svg">
                     <div class="text-center">
                         <h4 class="cardtext">GitHub</h4>
@@ -153,7 +172,7 @@
                 </div>
             </a>
             <a class="nounderline" href="https://www.linkedin.com/in/david-zech-31496098/">
-                <div class="item col-auto">
+                <div class="item col-auto" id="linkedin">
                     <img height="120" width="120" src="./assets/linkedin.svg">
                     <div class="text-center">
                         <h4 class="cardtext">LinkedIn</h4>
@@ -161,7 +180,7 @@
                 </div>
             </a>
             <a class="nounderline" href="./assets/resume.pdf">
-                <div class="item col-auto">
+                <div class="item col-auto" id="resume">
                     <img height="120" width="120" src="./assets/resume.svg">
                     <div class="text-center">
                         <h4 class="cardtext">Resume</h4>
@@ -172,7 +191,7 @@
         <div class="flip-box">
             <div class="row text-center justify-content-center inverse">
                 <a class="nounderline">
-                    <div class="item col-auto">
+                    <div class="item col-auto" id="github">
                         <img height="120" width="120" src="./assets/github.svg">
                         <div class="text-center">
                             <h4 class="cardtext">GitHub</h4>
@@ -180,7 +199,7 @@
                     </div>
                 </a>
                 <a class="nounderline">
-                    <div class="item col-auto">
+                    <div class="item col-auto" id="linkedin">
                         <img height="120" width="120" src="./assets/linkedin.svg">
                         <div class="text-center">
                             <h4 class="cardtext">LinkedIn</h4>
@@ -188,7 +207,7 @@
                     </div>
                 </a>
                 <a class="nounderline">
-                    <div class="item col-auto">
+                    <div class="item col-auto" id="resume">
                         <img height="120" width="120" src="./assets/resume.svg">
                         <div class="text-center">
                             <h4 class="cardtext">Resume</h4>
@@ -199,4 +218,10 @@
         </div>
     </div>
 </body>
+<script>
+    $(".email").hover(e => {
+        $(".at").replaceWith("@")
+        e.currentTarget.setAttribute("href", "mailto:david" + ['@'] + "davidzech.com");
+    })
+</script>
 </html>
