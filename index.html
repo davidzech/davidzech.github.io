@@ -223,5 +223,10 @@
         $(".at").replaceWith("@")
         e.currentTarget.setAttribute("href", "mailto:david" + ['@'] + "davidzech.com");
     })
+    $(".item").hover(e => {
+        $(".inverse #" + e.currentTarget.id).css("transform", "scale(1.08)");
+    }, e => {
+        $(".inverse #" + e.currentTarget.id).css("transform", "scale(1.0)");
+    })
 </script>
 </html>
