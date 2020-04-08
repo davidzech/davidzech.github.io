@@ -15,46 +15,21 @@
 </head>
 
 <body>
-    <div class="main container">
-        <div class="row text-center justify-content-md-center titlecard">
-            <div class="col-md-auto">
-                <div class="jumbotron">
-                    <h1 class="name text-center-overflow">David Zech</h1>
-                    <h4 class="subtitle text-center-overflow">Software Engineer</h4>
-                    <a class="email nounderline" href="mailto:goawaybots@davidzech.com" target="_top">david<span
-                            class="at"></span>davidzech.com</a>
+    <div class="main">
+        <div class="container">
+            <div class="row text-center justify-content-md-center titlecard">
+                <div class="col-md-auto">
+                    <div class="jumbotron">
+                        <h1 class="name text-center-overflow">David Zech</h1>
+                        <h4 class="subtitle text-center-overflow">Software Engineer</h4>
+                        <h5><a class="email nounderline text-center-overflow" href="mailto:goawaybots@davidzech.com" target="_top">david<span
+                                class="at"></span>davidzech.com</a>
+                                </h5>   
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row text-center justify-content-center links">
-            <a class="item nounderline" href="https://github.com/davidzech" id="github">
-                <div class="col-auto">
-                    <img height="120" width="120" src="./assets/github.svg">
-                    <div class="text-center">
-                        <h4 class="cardtext">GitHub</h4>
-                    </div>
-                </div>
-            </a>
-            <a class="item nounderline" href="https://www.linkedin.com/in/david-zech-31496098/" id="linkedin">
-                <div class="col-auto">
-                    <img height="120" width="120" src="./assets/linkedin.svg">
-                    <div class="text-center">
-                        <h4 class="cardtext">LinkedIn</h4>
-                    </div>
-                </div>
-            </a>
-            <a class="item nounderline" href="./assets/resume.pdf" id="resume">
-                <div class="col-auto">
-                    <img height="120" width="120" src="./assets/resume.svg">
-                    <div class="text-center">
-                        <h4 class="cardtext">Resume</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="flip-box">
-            <div class="row text-center justify-content-center inverse">
-                <a class="item nounderline" id="github">
+            <div class="row text-center justify-content-center links">
+                <a class="item nounderline" href="https://github.com/davidzech" id="github">
                     <div class="col-auto">
                         <img height="120" width="120" src="./assets/github.svg">
                         <div class="text-center">
@@ -62,7 +37,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="item nounderline" id="linkedin">
+                <a class="item nounderline" href="https://www.linkedin.com/in/david-zech-31496098/" id="linkedin">
                     <div class="col-auto">
                         <img height="120" width="120" src="./assets/linkedin.svg">
                         <div class="text-center">
@@ -70,7 +45,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="item nounderline" id="resume">
+                <a class="item nounderline" href="./assets/resume.pdf" id="resume">
                     <div class="col-auto">
                         <img height="120" width="120" src="./assets/resume.svg">
                         <div class="text-center">
@@ -78,6 +53,34 @@
                         </div>
                     </div>
                 </a>
+            </div>
+            <div class="flip-box">
+                <div class="row text-center justify-content-center inverse">
+                    <a class="item nounderline" id="github">
+                        <div class="col-auto">
+                            <img height="120" width="120" src="./assets/github.svg">
+                            <div class="text-center">
+                                <h4 class="cardtext">GitHub</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="item nounderline" id="linkedin">
+                        <div class="col-auto">
+                            <img height="120" width="120" src="./assets/linkedin.svg">
+                            <div class="text-center">
+                                <h4 class="cardtext">LinkedIn</h4>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="item nounderline" id="resume">
+                        <div class="col-auto">
+                            <img height="120" width="120" src="./assets/resume.svg">
+                            <div class="text-center">
+                                <h4 class="cardtext">Resume</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -98,8 +101,9 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-    
+
         gtag('config', 'UA-163102094-1');
-    </script>    
+    </script>
 </body>
+
 </html>
