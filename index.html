@@ -41,22 +41,13 @@
 
     @keyframes fade-in-from-bottom {
         0% {
-            transform: translateY(-2.5rem) scaleY(-0.4) rotateX(-40deg) scaleX(1.05);
+            transform: translateY(-0.5rem) scaleY(-0.4) rotateX(-40deg) scaleX(1.05);
             opacity: 0;
         }
 
         100% {
-            transform: translateY(-3rem) scaleY(-0.3) rotateX(-40deg) scaleX(1.05);
+            transform: scaleY(-0.3) rotateX(-40deg) scaleX(1.05);
             opacity: 100%;
-        }
-    }
-
-    @keyframes flipbox-transform {
-        0% {
-            perspective: 0;
-        }
-
-        100% {
         }
     }
 
@@ -71,7 +62,7 @@
     .inverse {
         margin-top: 0rem;
         animation: 0.7s ease-out fade-in-from-bottom;
-        transform: translateY(-3rem) scaleY(-0.3) rotateX(-40deg) scaleX(1.05);
+        transform: scaleY(-0.3) rotateX(-40deg) scaleX(1.05);
         pointer-events: none;
         -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.10)), to(rgba(0,0,0,0.01)));
     }
@@ -135,6 +126,9 @@
     .flip-box {
         background-color: transparent;
         perspective: 1000px;
+        position: relative;
+        top: -3rem;
+        z-index: -1;
     }
 </style>
 </head>
@@ -205,9 +199,4 @@
         </div>
     </div>
 </body>
-<script>
-    $("a").hover(e => {
-        console.log("hovering")
-    }, e => { console.log("not hovering")})
-</script>
 </html>
