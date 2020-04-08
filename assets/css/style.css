@@ -64,6 +64,7 @@
     pointer-events: none;
     -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.02)));
     filter: blur(0.06rem);
+    padding-top: 1rem; 
 }
 
 .text-center-overflow {
